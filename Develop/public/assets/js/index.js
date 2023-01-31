@@ -1,3 +1,6 @@
+// window = ("/js");
+// document = ("./js/notes.html");
+
 let noteTitle;
 let noteText;
 let saveNoteBtn;
