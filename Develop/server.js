@@ -4,13 +4,14 @@ const express = require("express");
 const path = require("path");
 const fs = require("fs");
 // for generating unique ids
-// const uuid = require('uuid');
-const api = require("./public/assets/js/index.js");
-const { response } = require("express");
+const uuid = require('./public/assets/js/uuid')
+// const api = require("./public/assets/js/index.js");
+// const { response } = require("express");
+const db = require('./db/db.json');
 
 // used to create paths and use with insomnia
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -41,6 +42,7 @@ app.post("/api/notes", (req, res) => {
     const newNotes = {
       title,
       text,
+      note_id: uuid(),
     };
 
     fs.readFile("./db/db.json", "utf8", (err, data) => {
@@ -49,7 +51,7 @@ app.post("/api/notes", (req, res) => {
       } else {
         const parsedNotes = JSON.parse(data);
         parsedNotes.push(newNotes);
-      // }
+
       fs.writeFile("./db/db.json", JSON.stringify(parsedNotes, null),
       (errMessage) => errMessage 
         ? console.error(errMessage)

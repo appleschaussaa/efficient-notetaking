@@ -1,1 +1,28 @@
-[{"title":"important","text":"remember this"},{"title":"Test Title","text":"Test text"},{"title":"important","text":"sorta"},{"title":"important","text":"sorta"},{"title":"tomorrow tasks","text":"finish this"}]
+[
+    {
+        "title": "important",
+        "text": "remember this"
+    },
+    {
+        "title": "Test Title",
+        "text": "Test text"
+    },
+    {
+        "title": "tomorrow tasks",
+        "text": "finish this"
+    },
+    {
+        "title": "get milk",
+        "text": "stop by the store"
+    },
+    {
+        "title": "Dont forget",
+        "text": "the uuid",
+        "note_id": "2040"
+    },
+    {
+        "title": "Dont forget",
+        "text": "the uuid",
+        "note_id": "b7b9"
+    }
+]

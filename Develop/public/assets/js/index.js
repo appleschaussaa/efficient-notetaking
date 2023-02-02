@@ -1,5 +1,3 @@
-// window = ("/js");
-// document = ("./js/notes.html");
 
 let noteTitle;
 let noteText;
@@ -184,3 +182,5 @@ if (window.location.pathname === '/notes') {
 }
 
 getAndRenderNotes();
+
+module.exports = getAndRenderNotes();
