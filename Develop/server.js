@@ -6,8 +6,7 @@ const fs = require("fs");
 // for generating unique ids
 const uuid = require('./public/assets/js/uuid')
 // const api = require("./public/assets/js/index.js");
-// const { response } = require("express");
-const db = require('./db/db.json');
+// const db = require('./db/db.json');
 
 // used to create paths and use with insomnia
 const app = express();
@@ -21,20 +20,18 @@ app.use(express.static('public'));
 
 
 app.get("/", (req, res) =>
-    res.sendFile(path.join(__dirname, "/public/index.html"))
+    res.sendFile(path.join(__dirname, "/public/assets/html/index.html"))
 );
 
 app.get("/notes", (req, res) =>
-  res.sendFile(path.join(__dirname, "/public/notes.html"))
+  res.sendFile(path.join(__dirname, "public/assets/html/notes.html"))
 );
 
-// GET template from activity 20
 app.get("/api/notes", (req, res) => {
   res.json(`${req.method} request received to get notes`);
   console.info(`${req.method} request received to get notes`);
 });
 
-// POST template from activity 20
 app.post("/api/notes", (req, res) => {
   console.info(`${req.method} request received to add a note`);
   const { title, text } = req.body;
@@ -52,7 +49,7 @@ app.post("/api/notes", (req, res) => {
         const parsedNotes = JSON.parse(data);
         parsedNotes.push(newNotes);
 
-      fs.writeFile("./db/db.json", JSON.stringify(parsedNotes, null),
+      fs.writeFile("./db/db.json", JSON.stringify(parsedNotes),
       (errMessage) => errMessage 
         ? console.error(errMessage)
         : console.info("Notes were added successfully")

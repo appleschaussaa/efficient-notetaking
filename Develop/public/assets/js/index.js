@@ -1,9 +1,13 @@
+const express = require("express");
+const app = express();
+app.use(express.static('public'));
 
 let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
+// const window = require("../html/notes.html");
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -24,7 +28,10 @@ const hide = (elem) => {
 };
 
 // activeNote is used to keep track of the note in the textarea
-let activeNote = {};
+let activeNote = {
+  title,
+  text,
+};
 
 const getNotes = () =>
   fetch('/api/notes', {
@@ -118,8 +125,8 @@ const handleRenderSaveBtn = () => {
 };
 
 // Render the list of note titles
-const renderNoteList = async (notes) => {
-  let jsonNotes = await notes.json();
+const renderNoteList = async (note) => {
+  let jsonNotes = await note.json();
   if (window.location.pathname === '/notes') {
     noteList.forEach((el) => (el.innerHTML = ''));
   }
