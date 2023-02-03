@@ -1,10 +1,9 @@
 // required modules
 const express = require("express");
-// const dbJson = require("./db/db.json");
 const path = require("path");
 const fs = require("fs");
 // for generating unique ids
-const uuid = require('./public/assets/js/uuid')
+const uuid = require('./public/js/uuid')
 // const api = require("./public/assets/js/index.js");
 // const db = require('./db/db.json');
 
@@ -14,7 +13,6 @@ const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-// app.use("/api", api);
 
 app.use(express.static('public'));
 
