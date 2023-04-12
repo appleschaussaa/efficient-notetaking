@@ -31,7 +31,7 @@ Users should be able to:
 ### Links
 ​
 - Github URL: [efficient-notetaking](https://github.com/appleschaussaa/efficient-notetaking)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Heroku Live Site URL: [Deployed Heroku](https://limitless-inlet-13933.herokuapp.com/)
 ​
 ## My process
 ​
