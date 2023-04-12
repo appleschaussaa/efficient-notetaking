@@ -1,14 +1,9 @@
-const express = require("express");
-const app = express();
-app.use(express.static('public'));
-
 
 let noteTitle;
 let noteText;
 let saveNoteBtn;
 let newNoteBtn;
 let noteList;
-// const window = require("../html/notes.html");
 
 if (window.location.pathname === '/notes') {
   noteTitle = document.querySelector('.note-title');
@@ -30,8 +25,8 @@ const hide = (elem) => {
 
 // activeNote is used to keep track of the note in the textarea
 let activeNote = {
-  title,
-  text,
+  title: '',
+  text: '',
 };
 
 const getNotes = () =>
@@ -191,4 +186,3 @@ if (window.location.pathname === '/notes') {
 
 getAndRenderNotes();
 
-module.exports = getAndRenderNotes();

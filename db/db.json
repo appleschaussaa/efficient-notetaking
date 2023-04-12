@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Call bank on Friday",
+        "text": "test note #1",
+        "id": "36f9b81c-2c05-45f3-8ac3-4a2da5968016"
+    },
+    {
+        "title": "Reschedule delivery",
+        "text": "Test note #2",
+        "id": "cf6370ed-d921-4f94-a727-2b34b3564362"
+    },
+    {
+        "title": "Finish payroll",
+        "text": "Test note #3",
+        "id": "7f8152f6-c96e-451a-b3cf-3ccbe73ce7fb"
+    },
+    {
+        "title": "Check in with clients",
+        "text": "Test note #4",
+        "id": "b06957a5-b0f5-4f4d-af39-bd6ff25ef551"
+    },
+    {
+        "title": "Add a new note",
+        "text": "Test note final",
+        "id": "7c4bfecf-d539-4eb0-8b0d-50330bbcbadc"
+    }
+]
